@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Praktikum Ke 1</title>
+<style>
+canvas{
+background-color :#ccc;
+}
+</style>
+</head>
+<body>
+<canvas height="500" width="1000" id="canvas"> == $0
+<script type="text/javascript">
+var c = document.getElementById('canvas');
+var ctx = c.getContext('2d');
+
+//segitiga kiri
+ctx.beginPath();
+ctx.moveTo(200, 125);
+ctx.lineTo(20, 250);
+ctx.lineTo(200, 375);
+ctx.closePath();
+ctx.strokeStyle = "yellow";
+ctx.fillStyle = "brown";
+ctx.fill();
+ctx.stroke();
+
+//segitiga kanan
+ctx.beginPath();
+ctx.moveTo(800, 125);
+ctx.lineTo(980, 250);
+ctx.lineTo(800, 375);
+ctx.closePath();
+ctx.strokeStyle = "yellow";
+ctx.fillStyle = "brown";
+ctx.fill();
+ctx.stroke();
+
+//lingkaran luar
+ctx.beginPath();
+ctx.arc(500, 250, 200, 0, 2 * Math.PI);
+ctx.strokeStyle = "purple";
+ctx.lineWidth = 10;
+ctx.fillStyle = "blue";
+ctx.fill();
+ctx.stroke();
+
+//lingkaran dalam
+ctx.beginPath();
+ctx.arc(500, 250, 145, 0, 2 * Math.PI);
+ctx.lineWidth = 10;
+ctx.fillStyle = "red";
+ctx.fill();
+
+//kotak
+ctx.beginPath();
+ctx.rect(425,185,150,150);
+ctx.fillStyle = "black";
+ctx.lineWidth = 8;
+ctx.strokeStyle = "white";
+ctx.fill();
+ctx.stroke();
+
+</script>
+</body>
+<html>
